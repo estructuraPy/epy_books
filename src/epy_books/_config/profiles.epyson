@@ -1,0 +1,334 @@
+{
+  "config_id": "profiles",
+  "version": "1.0.0",
+  "description": "Editorial book profiles published by epy_books.",
+  "audit_status": "n_a",
+  "audit_notes": "Editorial profile catalog: name, language, output formats and required book apparatus. No engineering magnitude.",
+  "references": {"entries": []},
+  "profiles": [
+    {
+      "id": "et_submission",
+      "name": "Editorial Tecnologica del TEC",
+      "description": "Manuscript for editorial evaluation and peer review.",
+      "language": "es",
+      "kind": "submission",
+      "design_default": "et_manuscrito",
+      "output_formats": ["docx", "pdf"],
+      "manuscript": {
+        "font_family": "Arial",
+        "font_size_pt": 12,
+        "line_spacing": 1.5,
+        "margins_cm": 3.0,
+        "page_size": "letter",
+        "citation_style": "apa",
+        "numbered_pages": true,
+        "editable_equations": true
+      },
+      "required_front_matter": ["title", "introduction", "toc"],
+      "required_back_matter": ["references", "ai_declaration"],
+      "validation": {
+        "require_isbn": false,
+        "require_permissions": true,
+        "require_ai_declaration": true,
+        "require_index": false
+      }
+    },
+    {
+      "id": "aec_ingenieria",
+      "name": "AEC - Ingenieria",
+      "description": "Structural, civil and construction engineering books.",
+      "language": "es",
+      "kind": "technical",
+      "design_default": "aec_ingenieria",
+      "output_formats": ["pdf", "docx", "html", "epub"],
+      "manuscript": {
+        "font_family": "Arial",
+        "font_size_pt": 12,
+        "line_spacing": 1.5,
+        "margins_cm": 3.0,
+        "page_size": "letter",
+        "citation_style": "apa",
+        "numbered_pages": true,
+        "editable_equations": true
+      },
+      "required_front_matter": ["title", "introduction", "toc"],
+      "required_back_matter": ["references", "index"],
+      "validation": {
+        "require_isbn": false,
+        "require_permissions": true,
+        "require_ai_declaration": true,
+        "require_index": true
+      }
+    },
+    {
+      "id": "aec_arquitectura",
+      "name": "AEC - Arquitectura",
+      "description": "Architecture and design books with image-led layouts.",
+      "language": "es",
+      "kind": "design",
+      "design_default": "aec_arquitectura",
+      "output_formats": ["pdf", "docx", "html", "epub"],
+      "manuscript": {
+        "font_family": "Arial",
+        "font_size_pt": 12,
+        "line_spacing": 1.5,
+        "margins_cm": 3.0,
+        "page_size": "letter",
+        "citation_style": "apa",
+        "numbered_pages": true,
+        "editable_equations": true
+      },
+      "required_front_matter": ["title", "introduction", "toc"],
+      "required_back_matter": ["references", "index"],
+      "validation": {
+        "require_isbn": false,
+        "require_permissions": true,
+        "require_ai_declaration": true,
+        "require_index": true
+      }
+    },
+    {
+      "id": "aec_construccion",
+      "name": "AEC - Construccion",
+      "description": "Construction, supervision and field books.",
+      "language": "es",
+      "kind": "technical",
+      "design_default": "aec_construccion",
+      "output_formats": ["pdf", "docx", "html", "epub"],
+      "manuscript": {
+        "font_family": "Arial",
+        "font_size_pt": 12,
+        "line_spacing": 1.5,
+        "margins_cm": 3.0,
+        "page_size": "letter",
+        "citation_style": "apa",
+        "numbered_pages": true,
+        "editable_equations": true
+      },
+      "required_front_matter": ["title", "introduction", "toc"],
+      "required_back_matter": ["references", "index"],
+      "validation": {
+        "require_isbn": false,
+        "require_permissions": true,
+        "require_ai_declaration": true,
+        "require_index": true
+      }
+    },
+    {
+      "id": "tecnologia",
+      "name": "Tecnologia y software",
+      "description": "Programming, data and software engineering books.",
+      "language": "es",
+      "kind": "technical",
+      "design_default": "tecnologia",
+      "output_formats": ["pdf", "docx", "html", "epub"],
+      "manuscript": {
+        "font_family": "Arial",
+        "font_size_pt": 12,
+        "line_spacing": 1.5,
+        "margins_cm": 3.0,
+        "page_size": "letter",
+        "citation_style": "apa",
+        "numbered_pages": true,
+        "editable_equations": true
+      },
+      "required_front_matter": ["title", "introduction", "toc"],
+      "required_back_matter": ["references", "index"],
+      "validation": {
+        "require_isbn": false,
+        "require_permissions": true,
+        "require_ai_declaration": true,
+        "require_index": true
+      }
+    },
+    {
+      "id": "salud",
+      "name": "Ciencias de la Salud",
+      "description": "Health sciences and clinical books.",
+      "language": "es",
+      "kind": "technical",
+      "design_default": "salud",
+      "output_formats": ["pdf", "docx", "html", "epub"],
+      "manuscript": {
+        "font_family": "Arial",
+        "font_size_pt": 12,
+        "line_spacing": 1.5,
+        "margins_cm": 3.0,
+        "page_size": "letter",
+        "citation_style": "apa",
+        "numbered_pages": true,
+        "editable_equations": true
+      },
+      "required_front_matter": ["title", "introduction", "toc"],
+      "required_back_matter": ["references", "index"],
+      "validation": {
+        "require_isbn": false,
+        "require_permissions": true,
+        "require_ai_declaration": true,
+        "require_index": true
+      }
+    },
+    {
+      "id": "negocios",
+      "name": "Negocios",
+      "description": "Management, economics and business books.",
+      "language": "es",
+      "kind": "professional",
+      "design_default": "negocios",
+      "output_formats": ["pdf", "docx", "html", "epub"],
+      "manuscript": {
+        "font_family": "Arial",
+        "font_size_pt": 12,
+        "line_spacing": 1.5,
+        "margins_cm": 3.0,
+        "page_size": "letter",
+        "citation_style": "apa",
+        "numbered_pages": true,
+        "editable_equations": true
+      },
+      "required_front_matter": ["title", "introduction", "toc"],
+      "required_back_matter": ["references", "index"],
+      "validation": {
+        "require_isbn": false,
+        "require_permissions": true,
+        "require_ai_declaration": true,
+        "require_index": true
+      }
+    },
+    {
+      "id": "humanidades",
+      "name": "Humanidades",
+      "description": "Humanities and social science books.",
+      "language": "es",
+      "kind": "academic",
+      "design_default": "humanidades",
+      "output_formats": ["pdf", "docx", "html", "epub"],
+      "manuscript": {
+        "font_family": "Arial",
+        "font_size_pt": 12,
+        "line_spacing": 1.5,
+        "margins_cm": 3.0,
+        "page_size": "letter",
+        "citation_style": "apa",
+        "numbered_pages": true,
+        "editable_equations": true
+      },
+      "required_front_matter": ["title", "introduction", "toc"],
+      "required_back_matter": ["references", "index"],
+      "validation": {
+        "require_isbn": false,
+        "require_permissions": true,
+        "require_ai_declaration": true,
+        "require_index": true
+      }
+    },
+    {
+      "id": "derecho",
+      "name": "Derecho",
+      "description": "Legal books and casebooks.",
+      "language": "es",
+      "kind": "academic",
+      "design_default": "derecho",
+      "output_formats": ["pdf", "docx", "html", "epub"],
+      "manuscript": {
+        "font_family": "Arial",
+        "font_size_pt": 12,
+        "line_spacing": 1.5,
+        "margins_cm": 3.0,
+        "page_size": "letter",
+        "citation_style": "apa",
+        "numbered_pages": true,
+        "editable_equations": true
+      },
+      "required_front_matter": ["title", "introduction", "toc"],
+      "required_back_matter": ["references", "index"],
+      "validation": {
+        "require_isbn": false,
+        "require_permissions": true,
+        "require_ai_declaration": true,
+        "require_index": true
+      }
+    },
+    {
+      "id": "educacion",
+      "name": "Educacion",
+      "description": "Textbooks, workbooks and teaching guides.",
+      "language": "es",
+      "kind": "textbook",
+      "design_default": "educacion",
+      "output_formats": ["pdf", "docx", "html", "epub"],
+      "manuscript": {
+        "font_family": "Arial",
+        "font_size_pt": 12,
+        "line_spacing": 1.5,
+        "margins_cm": 3.0,
+        "page_size": "letter",
+        "citation_style": "apa",
+        "numbered_pages": true,
+        "editable_equations": true
+      },
+      "required_front_matter": ["title", "introduction", "toc"],
+      "required_back_matter": ["references", "index"],
+      "validation": {
+        "require_isbn": false,
+        "require_permissions": true,
+        "require_ai_declaration": true,
+        "require_index": true
+      }
+    },
+    {
+      "id": "divulgacion",
+      "name": "Divulgacion",
+      "description": "General-interest and trade books.",
+      "language": "es",
+      "kind": "trade",
+      "design_default": "divulgacion",
+      "output_formats": ["pdf", "docx", "html", "epub"],
+      "manuscript": {
+        "font_family": "Arial",
+        "font_size_pt": 12,
+        "line_spacing": 1.5,
+        "margins_cm": 3.0,
+        "page_size": "letter",
+        "citation_style": "apa",
+        "numbered_pages": true,
+        "editable_equations": true
+      },
+      "required_front_matter": ["title", "introduction", "toc"],
+      "required_back_matter": ["references", "index"],
+      "validation": {
+        "require_isbn": false,
+        "require_permissions": true,
+        "require_ai_declaration": true,
+        "require_index": true
+      }
+    },
+    {
+      "id": "general",
+      "name": "General",
+      "description": "Generic editorial profile.",
+      "language": "es",
+      "kind": "general",
+      "design_default": "general",
+      "output_formats": ["pdf", "docx", "html", "epub"],
+      "manuscript": {
+        "font_family": "Arial",
+        "font_size_pt": 12,
+        "line_spacing": 1.5,
+        "margins_cm": 3.0,
+        "page_size": "letter",
+        "citation_style": "apa",
+        "numbered_pages": true,
+        "editable_equations": true
+      },
+      "required_front_matter": ["title", "toc"],
+      "required_back_matter": ["references"],
+      "validation": {
+        "require_isbn": false,
+        "require_permissions": true,
+        "require_ai_declaration": true,
+        "require_index": false
+      }
+    }
+  ]
+}

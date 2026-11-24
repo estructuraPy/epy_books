@@ -1,0 +1,142 @@
+{
+  "config_id": "designs",
+  "version": "1.0.0",
+  "description": "Interior design profiles published by epy_books.",
+  "audit_status": "n_a",
+  "audit_notes": "Book design catalog: page geometry, margins, typography and palette. Design values are editorial choices, not standards.",
+  "references": {"entries": []},
+  "designs": [
+    {
+      "id": "et_manuscrito",
+      "name": "Manuscrito ET",
+      "description": "Plain submission manuscript for the Editorial Tecnologica del TEC.",
+      "layout_style": "academic",
+      "page": {"width_in": 8.5, "height_in": 11.0, "bleed_in": 0.0},
+      "margins": {"top_in": 1.18, "bottom_in": 1.18, "inside_in": 1.18, "outside_in": 1.18, "mirror": false},
+      "typography": {"body_family": "Arial", "body_size_pt": 12.0, "leading": 1.5, "heading_family": "Arial", "heading_scale": 1.2, "caption_size_pt": 10.0, "code_family": "Consolas", "code_size_pt": 9.0},
+      "palette": {"ink": [0, 0, 0], "accent": [0, 36, 63], "secondary": [87, 106, 61], "paper": [255, 255, 255], "rule": [120, 120, 120]},
+      "components": {"chapter_opener": "plain", "part_opener": "plain", "running_head": false, "folio": "bottom-center", "toc": true, "lof": false, "lot": false, "index": false}
+    },
+    {
+      "id": "aec_ingenieria",
+      "name": "AEC Ingenieria",
+      "description": "Technical engineering books with tables, equations and code.",
+      "layout_style": "academic",
+      "page": {"width_in": 8.5, "height_in": 11.0, "bleed_in": 0.0},
+      "margins": {"top_in": 1.1, "bottom_in": 1.1, "inside_in": 1.2, "outside_in": 1.0, "mirror": true},
+      "typography": {"body_family": "Times New Roman", "body_size_pt": 11.0, "leading": 1.35, "heading_family": "Arial", "heading_scale": 1.25, "caption_size_pt": 9.0, "code_family": "Consolas", "code_size_pt": 8.5},
+      "palette": {"ink": [11, 12, 12], "accent": [0, 36, 63], "secondary": [87, 106, 61], "paper": [255, 255, 255], "rule": [192, 171, 135]},
+      "components": {"chapter_opener": "rule", "part_opener": "band", "running_head": true, "folio": "outside", "toc": true, "lof": true, "lot": true, "index": true}
+    },
+    {
+      "id": "aec_arquitectura",
+      "name": "AEC Arquitectura",
+      "description": "Image-led architecture books with generous margins.",
+      "layout_style": "professional",
+      "page": {"width_in": 8.5, "height_in": 11.0, "bleed_in": 0.125},
+      "margins": {"top_in": 1.0, "bottom_in": 1.0, "inside_in": 1.35, "outside_in": 1.1, "mirror": true},
+      "typography": {"body_family": "Arial", "body_size_pt": 10.5, "leading": 1.4, "heading_family": "Arial", "heading_scale": 1.35, "caption_size_pt": 9.0, "code_family": "Consolas", "code_size_pt": 8.5},
+      "palette": {"ink": [30, 30, 30], "accent": [70, 70, 70], "secondary": [192, 171, 135], "paper": [255, 255, 255], "rule": [180, 180, 180]},
+      "components": {"chapter_opener": "image", "part_opener": "full-page", "running_head": true, "folio": "outside", "toc": true, "lof": true, "lot": false, "index": true}
+    },
+    {
+      "id": "aec_construccion",
+      "name": "AEC Construccion",
+      "description": "Construction and supervision books with forms and checklists.",
+      "layout_style": "professional",
+      "page": {"width_in": 8.5, "height_in": 11.0, "bleed_in": 0.0},
+      "margins": {"top_in": 1.0, "bottom_in": 1.0, "inside_in": 1.1, "outside_in": 1.0, "mirror": true},
+      "typography": {"body_family": "Arial", "body_size_pt": 10.5, "leading": 1.4, "heading_family": "Arial", "heading_scale": 1.25, "caption_size_pt": 9.0, "code_family": "Consolas", "code_size_pt": 8.5},
+      "palette": {"ink": [0, 0, 0], "accent": [0, 36, 63], "secondary": [87, 106, 61], "paper": [255, 255, 255], "rule": [80, 80, 80]},
+      "components": {"chapter_opener": "band", "part_opener": "band", "running_head": true, "folio": "outside", "toc": true, "lof": true, "lot": true, "index": true}
+    },
+    {
+      "id": "tecnologia",
+      "name": "Tecnologia",
+      "description": "Programming and data books with code-first layout.",
+      "layout_style": "academic",
+      "page": {"width_in": 8.5, "height_in": 11.0, "bleed_in": 0.0},
+      "margins": {"top_in": 1.0, "bottom_in": 1.0, "inside_in": 1.1, "outside_in": 1.0, "mirror": true},
+      "typography": {"body_family": "Arial", "body_size_pt": 10.5, "leading": 1.4, "heading_family": "Arial", "heading_scale": 1.25, "caption_size_pt": 9.0, "code_family": "Consolas", "code_size_pt": 8.5},
+      "palette": {"ink": [20, 20, 20], "accent": [0, 36, 63], "secondary": [87, 106, 61], "paper": [255, 255, 255], "rule": [180, 180, 180]},
+      "components": {"chapter_opener": "rule", "part_opener": "band", "running_head": true, "folio": "outside", "toc": true, "lof": true, "lot": true, "index": true}
+    },
+    {
+      "id": "salud",
+      "name": "Salud",
+      "description": "Clinical and health sciences layout.",
+      "layout_style": "scientific",
+      "page": {"width_in": 7.0, "height_in": 10.0, "bleed_in": 0.0},
+      "margins": {"top_in": 0.9, "bottom_in": 0.9, "inside_in": 1.0, "outside_in": 0.8, "mirror": true},
+      "typography": {"body_family": "Arial", "body_size_pt": 10.5, "leading": 1.4, "heading_family": "Arial", "heading_scale": 1.2, "caption_size_pt": 9.0, "code_family": "Consolas", "code_size_pt": 8.5},
+      "palette": {"ink": [25, 25, 25], "accent": [0, 90, 120], "secondary": [0, 140, 140], "paper": [255, 255, 255], "rule": [170, 190, 200]},
+      "components": {"chapter_opener": "rule", "part_opener": "band", "running_head": true, "folio": "outside", "toc": true, "lof": true, "lot": true, "index": true}
+    },
+    {
+      "id": "negocios",
+      "name": "Negocios",
+      "description": "Modern business and management layout.",
+      "layout_style": "professional",
+      "page": {"width_in": 7.0, "height_in": 10.0, "bleed_in": 0.0},
+      "margins": {"top_in": 0.9, "bottom_in": 0.9, "inside_in": 1.0, "outside_in": 0.85, "mirror": true},
+      "typography": {"body_family": "Arial", "body_size_pt": 10.5, "leading": 1.4, "heading_family": "Arial", "heading_scale": 1.25, "caption_size_pt": 9.0, "code_family": "Consolas", "code_size_pt": 8.5},
+      "palette": {"ink": [25, 25, 25], "accent": [20, 50, 80], "secondary": [190, 145, 70], "paper": [255, 255, 255], "rule": [190, 190, 190]},
+      "components": {"chapter_opener": "band", "part_opener": "band", "running_head": true, "folio": "outside", "toc": true, "lof": false, "lot": true, "index": true}
+    },
+    {
+      "id": "humanidades",
+      "name": "Humanidades",
+      "description": "Classic humanities layout with generous margins.",
+      "layout_style": "classic",
+      "page": {"width_in": 6.0, "height_in": 9.0, "bleed_in": 0.0},
+      "margins": {"top_in": 0.9, "bottom_in": 1.0, "inside_in": 1.1, "outside_in": 0.85, "mirror": true},
+      "typography": {"body_family": "Times New Roman", "body_size_pt": 11.0, "leading": 1.4, "heading_family": "Times New Roman", "heading_scale": 1.2, "caption_size_pt": 9.0, "code_family": "Consolas", "code_size_pt": 8.5},
+      "palette": {"ink": [20, 20, 20], "accent": [80, 40, 40], "secondary": [160, 140, 110], "paper": [255, 255, 255], "rule": [170, 160, 150]},
+      "components": {"chapter_opener": "plain", "part_opener": "plain", "running_head": true, "folio": "outside", "toc": true, "lof": false, "lot": false, "index": true}
+    },
+    {
+      "id": "derecho",
+      "name": "Derecho",
+      "description": "Legal books with a classic, high-contrast layout.",
+      "layout_style": "classic",
+      "page": {"width_in": 6.0, "height_in": 9.0, "bleed_in": 0.0},
+      "margins": {"top_in": 0.9, "bottom_in": 1.0, "inside_in": 1.1, "outside_in": 0.85, "mirror": true},
+      "typography": {"body_family": "Times New Roman", "body_size_pt": 11.0, "leading": 1.4, "heading_family": "Arial", "heading_scale": 1.2, "caption_size_pt": 9.0, "code_family": "Consolas", "code_size_pt": 8.5},
+      "palette": {"ink": [15, 15, 15], "accent": [110, 30, 35], "secondary": [190, 170, 140], "paper": [255, 255, 255], "rule": [160, 150, 140]},
+      "components": {"chapter_opener": "rule", "part_opener": "band", "running_head": true, "folio": "outside", "toc": true, "lof": false, "lot": false, "index": true}
+    },
+    {
+      "id": "educacion",
+      "name": "Educacion",
+      "description": "Workbook and textbook layout with callouts and exercises.",
+      "layout_style": "corporate",
+      "page": {"width_in": 8.5, "height_in": 11.0, "bleed_in": 0.0},
+      "margins": {"top_in": 1.0, "bottom_in": 1.0, "inside_in": 1.1, "outside_in": 1.0, "mirror": true},
+      "typography": {"body_family": "Arial", "body_size_pt": 11.0, "leading": 1.4, "heading_family": "Arial", "heading_scale": 1.25, "caption_size_pt": 9.0, "code_family": "Consolas", "code_size_pt": 8.5},
+      "palette": {"ink": [20, 20, 20], "accent": [0, 70, 130], "secondary": [230, 160, 40], "paper": [255, 255, 255], "rule": [180, 200, 220]},
+      "components": {"chapter_opener": "band", "part_opener": "band", "running_head": true, "folio": "outside", "toc": true, "lof": true, "lot": true, "index": true}
+    },
+    {
+      "id": "divulgacion",
+      "name": "Divulgacion",
+      "description": "Trade-book layout for general readers.",
+      "layout_style": "classic",
+      "page": {"width_in": 5.5, "height_in": 8.5, "bleed_in": 0.0},
+      "margins": {"top_in": 0.8, "bottom_in": 0.9, "inside_in": 0.9, "outside_in": 0.75, "mirror": true},
+      "typography": {"body_family": "Times New Roman", "body_size_pt": 10.5, "leading": 1.35, "heading_family": "Arial", "heading_scale": 1.2, "caption_size_pt": 8.5, "code_family": "Consolas", "code_size_pt": 8.0},
+      "palette": {"ink": [25, 25, 25], "accent": [90, 50, 40], "secondary": [200, 160, 110], "paper": [255, 255, 255], "rule": [180, 170, 160]},
+      "components": {"chapter_opener": "plain", "part_opener": "plain", "running_head": false, "folio": "center", "toc": true, "lof": false, "lot": false, "index": false}
+    },
+    {
+      "id": "general",
+      "name": "General",
+      "description": "Neutral editorial layout.",
+      "layout_style": "corporate",
+      "page": {"width_in": 8.5, "height_in": 11.0, "bleed_in": 0.0},
+      "margins": {"top_in": 1.0, "bottom_in": 1.0, "inside_in": 1.0, "outside_in": 1.0, "mirror": false},
+      "typography": {"body_family": "Arial", "body_size_pt": 11.0, "leading": 1.4, "heading_family": "Arial", "heading_scale": 1.2, "caption_size_pt": 9.0, "code_family": "Consolas", "code_size_pt": 8.5},
+      "palette": {"ink": [20, 20, 20], "accent": [0, 36, 63], "secondary": [87, 106, 61], "paper": [255, 255, 255], "rule": [180, 180, 180]},
+      "components": {"chapter_opener": "plain", "part_opener": "plain", "running_head": false, "folio": "center", "toc": true, "lof": false, "lot": false, "index": false}
+    }
+  ]
+}

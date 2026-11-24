@@ -1,0 +1,9 @@
+{
+  "include": ["src", "tests"],
+  "exclude": ["**/__pycache__", "**/.venv", "examples"],
+  "typeCheckingMode": "standard",
+  "pythonVersion": "3.10",
+  "pythonPlatform": "Windows",
+  "reportMissingTypeStubs": false,
+  "reportPrivateImportUsage": false
+}

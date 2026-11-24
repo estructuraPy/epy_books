@@ -1,0 +1,14 @@
+{
+  "config_id": "settings",
+  "version": "1.0.0",
+  "description": "Default settings for epy_books.",
+  "audit_status": "n_a",
+  "audit_notes": "Application defaults: default profile, default design, output formats and store suffixes.",
+  "references": {"entries": []},
+  "default_profile": "aec_ingenieria",
+  "default_design": "aec_ingenieria",
+  "output_formats": ["pdf", "docx", "html", "epub"],
+  "store_suffix": ".kepy",
+  "archive_suffix": ".zepy",
+  "language": "es"
+}
