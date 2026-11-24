@@ -33,8 +33,29 @@ class _FakeDocs:
     DocumentWriter = _Writer
 
 
-def test_docs_available():
+def test_docs_available(monkeypatch):
+    from types import SimpleNamespace
+
+    monkeypatch.setattr(
+        docs_bridge,
+        "importlib",
+        SimpleNamespace(import_module=lambda name: object()),
+    )
     assert docs_bridge.epy_docs_available() is True
+
+
+def test_docs_not_available(monkeypatch):
+    from types import SimpleNamespace
+
+    def _raise(name):
+        raise ImportError(name)
+
+    monkeypatch.setattr(
+        docs_bridge,
+        "importlib",
+        SimpleNamespace(import_module=_raise),
+    )
+    assert docs_bridge.epy_docs_available() is False
 
 
 def test_render_book_delegates(project: Path, monkeypatch):
