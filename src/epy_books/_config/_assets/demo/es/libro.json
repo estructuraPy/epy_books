@@ -1,0 +1,24 @@
+{
+  "libro": {
+    "codigo": "LIBRO-DEMO",
+    "titulo": "El puente de la quebrada",
+    "subtitulo": "Una muestra de ePy Books",
+    "autor": "ePy Suite",
+    "afiliacion": "ePy Suite",
+    "idioma": "es",
+    "stem": "libro_demo"
+  },
+  "capitulos": [
+    {
+      "n": 1,
+      "titulo": "La decision",
+      "fuente": "libro/contenido/Cap01_La_decision.md"
+    },
+    {
+      "n": 2,
+      "titulo": "El cierre",
+      "fuente": "libro/contenido/Cap02_El_cierre.md"
+    }
+  ],
+  "partes": []
+}

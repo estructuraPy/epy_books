@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "epy_books"
-version = "0.1.0"
+version = "0.1.2"
 description = "Book authoring, editorial design and publication for the ePy suite."
 authors = [{ name = "Ing. Angel Navarro-Mora M.Sc.", email = "ahnavarro@itcr.ac.cr" }]
 maintainers = [{ name = "ANM Ingenieria", email = "ahnavarro@itcr.ac.cr" }]

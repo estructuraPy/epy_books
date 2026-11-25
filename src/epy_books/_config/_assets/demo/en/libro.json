@@ -1,0 +1,24 @@
+{
+  "libro": {
+    "codigo": "BOOK-DEMO",
+    "titulo": "The creek bridge",
+    "subtitulo": "A sample of ePy Books",
+    "autor": "ePy Suite",
+    "afiliacion": "ePy Suite",
+    "idioma": "en",
+    "stem": "book_demo"
+  },
+  "capitulos": [
+    {
+      "n": 1,
+      "titulo": "The decision",
+      "fuente": "libro/contenido/Cap01_The_decision.md"
+    },
+    {
+      "n": 2,
+      "titulo": "The close",
+      "fuente": "libro/contenido/Cap02_The_close.md"
+    }
+  ],
+  "partes": []
+}

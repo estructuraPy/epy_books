@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.2
+
+- Bilingual window with the File menu demo and a step-by-step guide.
+- English demo book beside the Spanish one.
+
 ## 0.1.0
 
 - Initial package skeleton.

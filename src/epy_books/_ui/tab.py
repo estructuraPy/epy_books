@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from collections.abc import Callable
 from pathlib import Path
 
 from PySide6.QtCore import Qt
@@ -21,6 +22,7 @@ from PySide6.QtWidgets import (
 )
 
 from epy_books import Book, DesignSpec, available_designs, available_profiles
+from epy_books._core import _i18n as i18n
 from epy_books._ui.design_dialog import DesignDialog
 
 
@@ -33,6 +35,7 @@ class BookTab(QWidget):
         self.path = Path(path)
         self.book = Book.from_file(self.path)
         self.setWindowTitle(self.book.manifest.title)
+        self._texts: list[tuple[Callable[[str], None], str]] = []
 
         title = QLabel(f"<h2>{self.book.manifest.title}</h2>")
         subtitle = QLabel(self.book.manifest.subtitle)
@@ -53,13 +56,15 @@ class BookTab(QWidget):
         )
 
         controls = QHBoxLayout()
-        controls.addWidget(QLabel("Perfil"))
+        controls.addWidget(self._lbl("Profile"))
         controls.addWidget(self.profile)
-        controls.addWidget(QLabel("Diseno"))
+        controls.addWidget(self._lbl("Design"))
         controls.addWidget(self.design)
 
         self.chapters = QTableWidget(0, 3)
-        self.chapters.setHorizontalHeaderLabels(["#", "Capitulo", "Archivo"])
+        self.chapters.setHorizontalHeaderLabels(
+            ["#", i18n.tr("Chapter"), i18n.tr("File")]
+        )
         self.chapters.horizontalHeader().setStretchLastSection(True)
         self.chapters.itemSelectionChanged.connect(self._show_chapter)
         for row, chapter in enumerate(self.book.manifest.chapters):
@@ -74,16 +79,16 @@ class BookTab(QWidget):
                 item.setFlags(item.flags() & ~Qt.ItemIsEditable)
                 self.chapters.setItem(row, column, item)
 
-        validate = QPushButton("Validar")
-        validate.clicked.connect(self._validate)
-        export = QPushButton("Exportar PDF")
-        export.clicked.connect(self._export_pdf)
-        design = QPushButton("Diseno...")
-        design.clicked.connect(self._edit_design)
+        self.validate = self._btn("Validate")
+        self.validate.clicked.connect(self._validate)
+        self.export = self._btn("Export PDF")
+        self.export.clicked.connect(self._export_pdf)
+        self.design_button = self._btn("Design...")
+        self.design_button.clicked.connect(self._edit_design)
         actions = QHBoxLayout()
-        actions.addWidget(validate)
-        actions.addWidget(design)
-        actions.addWidget(export)
+        actions.addWidget(self.validate)
+        actions.addWidget(self.design_button)
+        actions.addWidget(self.export)
         actions.addStretch(1)
 
         self.preview = QTextBrowser()
@@ -101,6 +106,24 @@ class BookTab(QWidget):
         layout.addWidget(split, 1)
         layout.addLayout(actions)
 
+    def _lbl(self, key: str) -> QLabel:
+        label = QLabel(i18n.tr(key))
+        self._texts.append((label.setText, key))
+        return label
+
+    def _btn(self, key: str) -> QPushButton:
+        button = QPushButton(i18n.tr(key))
+        self._texts.append((button.setText, key))
+        return button
+
+    def retranslate(self) -> None:
+        """Relabel the controls after a language change."""
+        for setter, key in self._texts:
+            setter(i18n.tr(key))
+        self.chapters.setHorizontalHeaderLabels(
+            ["#", i18n.tr("Chapter"), i18n.tr("File")]
+        )
+
     def _show_chapter(self) -> None:
         row = self.chapters.currentRow()
         if row < 0 or row >= len(self.book.manifest.chapters):
@@ -110,7 +133,7 @@ class BookTab(QWidget):
             text = self.book.text_for(chapter.source)
         except FileNotFoundError:
             text = ""
-        self.preview.setMarkdown(text or "Sin contenido.")
+        self.preview.setMarkdown(text or i18n.tr("No content."))
 
     def close(self) -> None:
         """Close the book store when the tab is closed."""
@@ -120,11 +143,15 @@ class BookTab(QWidget):
         profile_id = str(self.profile.currentData())
         result = self.book.validate(profile_id)
         if result.ok:
-            QMessageBox.information(self, "Validacion", "El libro cumple.")
+            QMessageBox.information(
+                self,
+                i18n.tr("Validation"),
+                i18n.tr("The book passes."),
+            )
             return
         QMessageBox.warning(
             self,
-            "Validacion",
+            i18n.tr("Validation"),
             "\n".join(item.message for item in result),
         )
 
@@ -144,12 +171,14 @@ class BookTab(QWidget):
             }
         )
         self.book.apply_design(updated)
-        QMessageBox.information(self, "Diseno", "Diseno actualizado.")
+        QMessageBox.information(
+            self, i18n.tr("Design"), i18n.tr("Design updated.")
+        )
 
     def _export_pdf(self) -> None:
         target, _ = QFileDialog.getSaveFileName(
             self,
-            "Exportar PDF",
+            i18n.tr("Export PDF"),
             f"{self.book.manifest.stem}.pdf",
             "PDF (*.pdf)",
         )
@@ -158,6 +187,8 @@ class BookTab(QWidget):
         try:
             self.book.to_pdf(target, design=str(self.design.currentData()))
         except Exception as exc:
-            QMessageBox.critical(self, "Exportar PDF", str(exc))
+            QMessageBox.critical(self, i18n.tr("Export PDF"), str(exc))
             return
-        QMessageBox.information(self, "Exportar PDF", "PDF generado.")
+        QMessageBox.information(
+            self, i18n.tr("Export PDF"), i18n.tr("PDF generated.")
+        )

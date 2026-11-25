@@ -35,7 +35,7 @@ from epy_books._core._validation import (
     Warning,
 )
 
-__version__ = "0.1.0"
+__version__ = "0.1.2"
 __author__ = "Ing. Angel Navarro-Mora M.Sc."
 
 __all__ = [
